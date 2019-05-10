@@ -4,13 +4,35 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Prism from "prismjs";
+// import "../css/prism.css";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <h1>Getting started</h1>
+    <p>A React component is a reusable pieces of code describing a UI. To make these reusable pieces 
+      dynamic you need to be able to supply them with different data. You do that with input called 
+      “props”. Props are (appropriately enough) properties supplied to React components..</p>
+    
+    <pre className="language-jsx gatsby-highlight">
+      <code className="language-jsx gatsby-highlight">
+          {`
+  import {Form} from 'semantic-ui-react'
+          
+          const Usage = () => (
+    <Form>
+            <Form.Group>
+              <Form.Input />
+              <Form.Select />
+              <Form.Button />
+            </Form.Group>
+          </Form>
+  )
+          
+          `}
+      </code>
+    </pre>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

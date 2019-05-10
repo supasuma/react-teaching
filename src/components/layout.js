@@ -13,19 +13,19 @@ import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
+  // <StaticQuery
+  //   query={graphql`
+  //     query SiteTitleQuery {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //         }
+  //       }
+  //     }
+  //   `}
+  //   render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={"Learning React"} />
         <div
           style={{
             margin: `0 auto`,
@@ -34,16 +34,17 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+        {/* {children} places everything rendered withing <Layout></Layout> within the main tags! important for accessibility  */}
           <main>{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Built with
+            © {new Date().getFullYear()}, Built by supasuma with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
       </>
-    )}
-  />
+  //   )}
+  // />
 )
 
 Layout.propTypes = {
