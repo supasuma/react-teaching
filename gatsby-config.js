@@ -14,7 +14,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`, //allows you to query data ABOUT files 
       options: {
         name: `src`,
         path: `${__dirname}/src/`,

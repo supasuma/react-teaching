@@ -14,24 +14,7 @@ const IndexPage = () => (
       dynamic you need to be able to supply them with different data. You do that with input called 
       “props”. Props are (appropriately enough) properties supplied to React components..</p>
     
-    <pre className="language-jsx gatsby-highlight">
-      <code className="language-jsx gatsby-highlight">
-          {`
-  import {Form} from 'semantic-ui-react'
-          
-          const Usage = () => (
-    <Form>
-            <Form.Group>
-              <Form.Input />
-              <Form.Select />
-              <Form.Button />
-            </Form.Group>
-          </Form>
-  )
-          
-          `}
-      </code>
-    </pre>
+    
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
@@ -54,3 +37,23 @@ export default IndexPage
 //   </Layout>
 // )
 
+
+
+  // < pre className = "language-jsx gatsby-highlight" >
+  //   <code className="language-jsx gatsby-highlight">
+  //     {`
+  // import {Form} from 'semantic-ui-react'
+          
+  //         const Usage = () => (
+  //   <Form>
+  //           <Form.Group>
+  //             <Form.Input />
+  //             <Form.Select />
+  //             <Form.Button />
+  //           </Form.Group>
+  //         </Form>
+  // )
+          
+  //         `}
+  //     </code>
+  //   </pre >
