@@ -2,12 +2,15 @@
 title: "Component"
 ---
 
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. 
 
-A React component is a reusable pieces of code describing a UI. To make these reusable pieces dynamic you need to be able to supply them with different data. You do that with input called “props”. Props are (appropriately enough) properties supplied to React components.
-#Simple expression 
 
 ```jsx
-
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
 ```
 
 
@@ -20,4 +23,3 @@ A React component is a reusable pieces of code describing a UI. To make these re
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>

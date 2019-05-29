@@ -8,6 +8,7 @@
 import React from "react"
 // import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import GetDogPhoto from "../components/dog"
 
 // import Header from "./header"
 
@@ -54,12 +55,21 @@ export default ({ children }) => (
         `}
         >
           About
-      </Link>
+        </Link>
         {children}
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <GetDogPhoto />      
+
+        </div>
       </div>
     )}
    /> 
 )
+
+
+  // < !--Embedded YouTube Video!!! -- >
+
+{/* < iframe width = "560" height = "315" src = "https://www.youtube.com/embed/4n0xNbfJLR8" frameborder = "0" allowfullscreen ></iframe > */}
 
 // const Layout = ({ children }) => (
   // <StaticQuery

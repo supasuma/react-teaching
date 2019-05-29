@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
@@ -21,20 +20,30 @@ export default ({ data }) => {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <h3 css={css`margin-bottom: ${rhythm(1 / 4)};`}>
-              {node.frontmatter.title}
-            </h3>
-            <p>{node.excerpt}</p>
+            <Link
+              to={node.fields.slug}
+              css={css`
+                text-decoration: none;
+                color: inherit;
+              `}  
+            >
+              <h3 css={css`margin-bottom: ${rhythm(1 / 4)};`}>
+                {node.frontmatter.title}
+              </h3>
+              <p>{node.excerpt}</p>
+            </Link>
           </div>
         ))}
       </div>
       
       
 
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
-      </div>
+      </div> */}
       <Link to="/page-2/">Go to page 2</Link>
+      
+
     </Layout>
   )
 }
@@ -48,6 +57,9 @@ export const query = graphql`
           id
           frontmatter {
             title
+          }
+          fields {
+            slug
           }
           excerpt
         }
