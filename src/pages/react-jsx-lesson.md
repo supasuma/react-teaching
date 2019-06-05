@@ -1,28 +1,46 @@
 ---
-title: "JSX - pretty much HTML"
+title: "JSX - the hybrid vehicle of code"
 ---
-So in my opinion it's preeeeeetty much HTML, actually it's more of a hybrid of HTML and Javascript - HT-script or Java-ML!
+So JSX is a hybrid of HTML and Javascript - HTM-script or Java-TML!
 
 The official word is that it's a "syntax extension to JavaScript".
 
-JSX produces React "elements" and allows us combine markup/UI work with the logic.
+JSX produces React "elements" and allows us to combine markup/UI work with the logic.
 
 #Simple expression 
 
 ```jsx
 import React from 'react';
-import { render } from 'react-dom';
+import { ReactDOM } from 'react-dom';
 
 const HelloWorld = () => {
   const name = 'World';
-  return <div>Hello {name}!</div>;
+  return <div className="fancy">Hello {name}!</div>;
 };
 
-render(<HelloWorld />, document.getElementById('root-1'));
+ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
-the `render` in the above example is 
 
+So in the above example the "logic" of declaring a const name & displaying it within the string "Hello World" is combined with the html <div>'s.  You can put ANY valid JavaScript expression within those curly braces.
 
+Beware that JSX uses `className` rather than `class` within the HTML-like bits - I think there are few other instances of this as well.
+
+React deals with it's separation of concerns using *components* which as far as I'm concerned are just like a Java or Ruby class (the only other languages I know)!
+
+Other "interesting" bits to know about JSX is that JSX tags may contain children:
+
+```jsx
+const element = (
+  <div className="fancy">
+    <h1>Hello Doggy!</h1>
+    <h2>Are you friends with kitty?</h2>
+  </div>
+);
+```
+
+To get up with the lingo (aka language), the above is a "React element".  They are the smallest building of blocks and are descriptions of what you want to see on the screen.  
+
+To render your element in a simple React app there will likely be an index.html file containing `<div id="root"></div>` which is the "root" DOM node as everything inside it is managed by React DOM.  
 
 ```html
 <!DOCTYPE html>
@@ -36,6 +54,13 @@ the `render` in the above example is
   </body>
 </html>
 ```
+
+To Render an element (or your whole react app) into this node, pass it and your element to `ReactDOM.render()` as we saw in the first example
+
+```jsx
+ReactDOM.render(element, document.getElementById('root'));
+```
+
 
 
 
