@@ -1,8 +1,9 @@
 ---
 title: "Component"
 ---
+As briefly touched on in our JSX lesson:-
 
->Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. React Docs
+>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. -- <cite>React Docs</cite>
 
 The simplest way to define a component in React is to write a JavaScript function:
 ```jsx
