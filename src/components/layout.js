@@ -34,8 +34,8 @@ export default ({ children }) => (
           display: 'flex',
           flexDirection: 'column',
           minHeight: 'calc(100vh - 40px)',
-        }}
-      > <Header siteTitle={data.site.siteMetadata.title} />
+        }}> 
+        <Header siteTitle={data.site.siteMetadata.title} />
         {/* <Link to={`/`}>
           <h3
             css={css`
