@@ -7,8 +7,9 @@ import React from 'react';
 const Container = ({ children }) => (
   <div
     css={{
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingLeft: 50,
+        paddingRight: 50,
+        paddingTop: 10,
         marginLeft: 'auto',
         marginRight: 'auto',
 

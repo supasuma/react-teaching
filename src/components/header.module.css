@@ -1,20 +1,14 @@
 .header {
     background: rebeccapurple;
     color: white;
-    position: 'fixed';
+    position: fixed;
     z-Index: 1;
-    width: '100%';
+    width: 100%;
+    height: 70px;
     top: 0;
     left: 0;
 }
 
-.div {
-    padding-left: 20;
-    padding-right: 20;
-    margin-left: 'auto';
-    margin-right: 'auto';
-}
-
 .h1 {
-    margin: 0
+    margin: 0;
 }

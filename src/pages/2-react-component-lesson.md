@@ -21,7 +21,13 @@ class Welcome extends React.Component {
   }
 }
 ```
-This demonstrates a concept we can look at later [Class versus Functional components](/4-functional-or-class-components/)
+This demonstrates a concept we can look at later [Class versus Functional components](/4-functional-or-class-components/).
+
+But now, let's talk Props!!!
+
+User defined Components & Props go together like peas & carrots
+
+![Alt Text](https://media.giphy.com/media/qyxyGxszt6LXW/giphy.gif)
 
 
 

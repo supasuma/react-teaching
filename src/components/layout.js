@@ -11,6 +11,8 @@ import { StaticQuery, graphql } from "gatsby"
 import GetDogPhoto from "../components/dog"
 
 import Header from "./header"
+import Container from "./container"
+
 
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
@@ -29,38 +31,42 @@ export default ({ children }) => (
       }
     `}
     render={ data => (
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: 'calc(100vh - 40px)',
-        }}> 
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <Link to={`/`}>
-          <h3
-            css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-          >
-            {data.site.siteMetadata.title}
-        </h3>
-        </Link>
-        <Link
-          to={`/about/`}
-          css={css`
-          float: right;
-        `}
-        >
-          About
-        </Link> */}
-        {children}
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <GetDogPhoto />      
-
+            <Container>
+              <div
+                css={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  minHeight: 'calc(100vh - 40px)',
+                  paddingTop: '70px',
+                }}>
+                {/* <Link to={`/`}>
+                  <h3
+                    css={css`
+                    margin-bottom: ${rhythm(2)};
+                    display: inline-block;
+                    font-style: normal;
+                  `}
+                  >
+                    {data.site.siteMetadata.title}
+                </h3>
+                </Link>
+                <Link
+                  to={`/about/`}
+                  css={css`
+                  float: right;
+                `}
+                >
+                  About
+                </Link> */}
+                {children}
+                <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+                  <GetDogPhoto />
+                </div>
+              </div>
+           </Container>
         </div>
-      </div>
     )}
    /> 
 )
