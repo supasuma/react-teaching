@@ -62,7 +62,7 @@ export default ({ children }) => (
                 </Link> */}
                 {children}
                 <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-                  <GetDogPhoto />
+                  <GetDogPhoto title="Cute Doggos"/>
                 </div>
               </div>
            </Container>

@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          React, <span style={{textDecoration: 'line-through'}}>don&#39;t</span> do it
         </Link>
       </h1>
     </Container>
