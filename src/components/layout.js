@@ -29,36 +29,35 @@ export default ({ children }) => (
       }
     `}
     render={ data => (
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: 'calc(100vh - 40px)',
-        }}> 
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <Link to={`/`}>
-          <h3
+        <div>
+        {/* <Link to={`/`}> */}
+          {/* <h3
             css={css`
             margin-bottom: ${rhythm(2)};
             display: inline-block;
             font-style: normal;
+            background-color: purple;
           `}
           >
-            {data.site.siteMetadata.title}
-        </h3>
-        </Link>
-        <Link
-          to={`/about/`}
-          css={css`
-          float: right;
-        `}
-        >
-          About
-        </Link> */}
-        {children}
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <GetDogPhoto />      
+            {data.site.siteMetadata.title} */}
+          {/* </h3>  */}
+          <Header siteTitle={data.site.siteMetadata.title} />
 
+        {/* </Link> */}
+        
+        <div
+          css={css`
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: ${ rhythm(2)};
+            padding-top: ${ rhythm(1.5)};
+            
+            `}
+        > 
+          {children}
+          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+            <GetDogPhoto />      
+          </div>
         </div>
       </div>
     )}

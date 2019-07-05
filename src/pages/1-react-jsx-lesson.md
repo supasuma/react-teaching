@@ -21,9 +21,10 @@ const HelloWorld = () => {
 ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
 
-So in the above example the "logic" of declaring a const name & displaying it within the string "Hello World" is combined with the html <div>'s.  You can put ANY valid JavaScript expression within those curly braces.
+So in the above example the "logic" of declaring a const name & displaying it within the string "Hello World!" is combined with the html <div>'s.  You can put ANY valid JavaScript expression within those curly braces.
 
 Beware that JSX uses `className` rather than `class` within the HTML-like bits - I think there are few other instances of this as well.
+
 
 React deals with it's separation of concerns using *components* which as far as I'm concerned are just like a Java or Ruby class (the only other languages I know)!
 
@@ -38,7 +39,7 @@ const element = (
 );
 ```
 
-To get up with the lingo (aka language), the above is a "React element".  They are the smallest building of blocks and are descriptions of what you want to see on the screen.  
+To get up with the lingo (aka language), the above is a "React element".  They are the smallest building blocks and are descriptions of what you want to see on the screen.  
 
 To render your element in a simple React app there will likely be an index.html file containing `<div id="root"></div>` which is the "root" DOM node as everything inside it is managed by React DOM.  
 

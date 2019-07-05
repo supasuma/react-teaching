@@ -2,11 +2,13 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import headerStyles from "./header.module.css"
+import { css } from "@emotion/core"
+
 import Container from "./container"
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
-    <Container>
+    {/* <Container> */}
       <h1 className={headerStyles.h1}>
         <Link
           to="/"
@@ -17,9 +19,22 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
+
         {/* {siteTitle} */}
+      <Link
+        to={`/about/`}
+        style={{
+          float: `right`,
+          color: `white`,
+          textDecoration: `none`,
+          fontSize: `20px`,
+          paddingTop: `20px`,
+        }}
+      >
+        About
+        </Link> 
       </h1>
-    </Container>
+    {/* </Container> */}
   </header>
 )
 
