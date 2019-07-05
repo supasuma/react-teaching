@@ -38,7 +38,10 @@ class GetDogPhoto extends React.Component {
     render() {
         const { imageURL } = this.state;
         return (
-            <img src={imageURL} />
+            <div>
+                <h1>{this.props.title}</h1>
+                <img src={imageURL} />
+            </div>
         );
     }
 }

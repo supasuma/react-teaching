@@ -11,6 +11,8 @@ import { StaticQuery, graphql } from "gatsby"
 import GetDogPhoto from "../components/dog"
 
 import Header from "./header"
+import Container from "./container"
+
 
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
@@ -29,37 +31,42 @@ export default ({ children }) => (
       }
     `}
     render={ data => (
-        <div>
-        {/* <Link to={`/`}> */}
-          {/* <h3
-            css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-            background-color: purple;
-          `}
-          >
-            {data.site.siteMetadata.title} */}
-          {/* </h3>  */}
-          <Header siteTitle={data.site.siteMetadata.title} />
-
-        {/* </Link> */}
-        
-        <div
-          css={css`
-            margin: 0 auto;
-            max-width: 1000px;
-            padding: ${ rhythm(2)};
-            padding-top: ${ rhythm(1.5)};
-            
-            `}
-        > 
-          {children}
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <GetDogPhoto />      
-          </div>
+      <div>
+        <Header siteTitle={data.site.siteMetadata.title} />
+            <Container>
+              <div
+                css={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  minHeight: 'calc(100vh - 40px)',
+                  paddingTop: '70px',
+                }}>
+                {/* <Link to={`/`}>
+                  <h3
+                    css={css`
+                    margin-bottom: ${rhythm(2)};
+                    display: inline-block;
+                    font-style: normal;
+                  `}
+                  >
+                    {data.site.siteMetadata.title}
+                </h3>
+                </Link>
+                <Link
+                  to={`/about/`}
+                  css={css`
+                  float: right;
+                `}
+                >
+                  About
+                </Link> */}
+                {children}
+                <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+                  <GetDogPhoto title="Cute Doggos"/>
+                </div>
+              </div>
+           </Container>
         </div>
-      </div>
     )}
    /> 
 )

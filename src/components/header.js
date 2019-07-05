@@ -1,14 +1,12 @@
-import { Link } from "gatsby"
+ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import headerStyles from "./header.module.css"
-import { css } from "@emotion/core"
-
 import Container from "./container"
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
-    {/* <Container> */}
+    <Container>
       <h1 className={headerStyles.h1}>
         <Link
           to="/"
@@ -17,7 +15,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          React, <span style={{textDecoration: 'line-through'}}>don&#39;t</span> do it
         </Link>
 
         {/* {siteTitle} */}
@@ -32,9 +30,9 @@ const Header = ({ siteTitle }) => (
         }}
       >
         About
-        </Link> 
+        </Link>
       </h1>
-    {/* </Container> */}
+    </Container>
   </header>
 )
 
