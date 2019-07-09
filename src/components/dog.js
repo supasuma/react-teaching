@@ -6,17 +6,18 @@ class GetDogPhoto extends React.Component {
     constructor() {
         super();
         this.state = {
-            imageURL: '',
+            imageURL: this.getDog(),
         }
     }
     
     //look at using async / await
     componentDidMount() {
-        this.getDog();
+        // this.intervalThingy = setInterval(function(){ this.getDog(); }, 3000);
+
         this.intervalThingy = setInterval(() => {
             this.getDog();
         }, 3000);
- // Why doesn't the below work? OR throw any error.  Because this.getDog() calls the method 
+ // Why doesn't the below work? OR throw any error.  Because this.getDog() calls the method
  // right away because it isn't inside a function. 
         // this.intervalThingy = setInterval(this.getDog(), 3000)
     }
@@ -39,7 +40,7 @@ class GetDogPhoto extends React.Component {
         const { imageURL } = this.state;
         return (
             <div>
-                <h1>{this.props.title}</h1>
+                <h3 >{this.props.title}</h3>
                 <img src={imageURL} />
             </div>
         );

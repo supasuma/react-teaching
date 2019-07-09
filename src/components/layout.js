@@ -32,7 +32,7 @@ export default ({ children }) => (
     `}
     render={ data => (
       <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
             <Container>
               <div
                 css={{

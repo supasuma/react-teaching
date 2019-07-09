@@ -6,13 +6,13 @@ import Container from "./container"
 
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
-    <Container>
       <h1 className={headerStyles.h1}>
         <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
+              paddingBottom: `70px`,
           }}
         >
           React, <span style={{textDecoration: 'line-through'}}>don&#39;t</span> do it
@@ -26,13 +26,11 @@ const Header = ({ siteTitle }) => (
           color: `white`,
           textDecoration: `none`,
           fontSize: `20px`,
-          paddingTop: `20px`,
         }}
       >
         About
         </Link>
       </h1>
-    </Container>
   </header>
 )
 

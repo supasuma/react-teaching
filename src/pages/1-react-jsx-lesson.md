@@ -1,13 +1,11 @@
 ---
 title: "JSX - the hybrid vehicle of code"
 ---
-So JSX is a hybrid of HTML and Javascript - HTM-script or Java-TML!
+So JSX is a hybrid of HTML and Javascript - HTM-script or Java-TML! &nbsp;&nbsp;The official word is that it's a "syntax extension to JavaScript".
 
-The official word is that it's a "syntax extension to JavaScript".
+It allows us to produce React "elements" and which can combine presentation work with logic.
 
-JSX produces React "elements" and allows us to combine markup/UI work with the logic.
-
-#Simple expression 
+###Simple expression 
 
 ```jsx
 import React from 'react';
@@ -21,14 +19,18 @@ const HelloWorld = () => {
 ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
 
-So in the above example the "logic" of declaring a const name & displaying it within the string "Hello World!" is combined with the html <div>'s.  You can put ANY valid JavaScript expression within those curly braces.
+So in the above example the "logic" of declaring a const name & displaying it within the string "Hello World!" is combined with the html `<div>`'s.  
+
+You can put ANY valid JavaScript expression within those curly braces.
 
 Beware that JSX uses `className` rather than `class` within the HTML-like bits - I think there are few other instances of this as well.
 
 
-React deals with it's separation of concerns using *components* which as far as I'm concerned are just like a Java or Ruby class (the only other languages I know)!
+React deals with it's separation of concerns using *components*.
 
-Other "interesting" bits to know about JSX is that JSX tags may contain children:
+###Other "interesting" bits to know about JSX 
+
+JSX tags may contain children:
 
 ```jsx
 const element = (
@@ -56,13 +58,14 @@ To render your element in a simple React app there will likely be an index.html 
 </html>
 ```
 
-To Render an element (or your whole react app) into this node, pass it and your element to `ReactDOM.render()` as we saw in the first example
+To Render an element (or your whole react app) into this node, pass it and your element/App to `ReactDOM.render()` as we saw in the first example
 
 ```jsx
 ReactDOM.render(element, document.getElementById('root'));
 ```
 
 
+[Onto Components & Props](/2-react-component-lesson/)
 
 
 

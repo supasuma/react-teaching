@@ -1,4 +1,5 @@
 import React from 'react';
+import GetDogPhoto from "../components/dog"
 
 /**
  * This component wraps page content sections (eg header, footer, main).
@@ -7,14 +8,15 @@ import React from 'react';
 const Container = ({ children }) => (
   <div
     css={{
-        paddingLeft: 100,
-        paddingRight: 100,
-        paddingTop: 10,
+        paddingLeft: 200,
+        paddingRight: 200,
+        paddingTop: 30,
         marginLeft: 'auto',
         marginRight: 'auto',
 
     }}>
     {children}
+
   </div>
 );
 
