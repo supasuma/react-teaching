@@ -1,4 +1,5 @@
 ---
+date: "2019-07-03"
 title: "Look at the *state* of you..."
 ---
 
@@ -41,6 +42,7 @@ class CuteDoggyPhoto extends React.Component {
 export default GetDogPhoto;
 ```
 <br/>
+
 In order to update state a `getDoggyPhoto()` method needs to be implemented - obviously! 
 <br/>
 <br/>
@@ -64,7 +66,8 @@ getDoggyPhoto uses axios to make an http request and once it receives a response
 our cute doggy photos.
 
 Every time `this.setState()` is called the `render()` method will be triggered; regardless of whether the photo has actually changed or not! 
-In some cases this can become inefficient but there is a React lifecycle method to help with this `shouldComponentUpdate(nextProps)`.
+In some cases this can be inefficient but there is a React lifecycle method to help with this `shouldComponentUpdate(nextProps, nextProps)` - though
+according to the React docs it is rarely used.
 
 
 In order to update a cute doggy photo every three seconds we need to set up a timer and for this we use some lifecycle methods.
@@ -95,14 +98,15 @@ And because Javascript. The above arrow method could also be written as the belo
 ```
 
 ## Some other things about state
-
+### data flows doooowwwn town
 State is private and fully controlled by the component and within more complex applications where parent components may 
 need to share state with its children it could pass it down as props.
 
 Which prompts a second point that data flows down and is commonly called "top-down" or "unidirectional".  So any data or 
 UI derived from the state of a component can only affect components "below" them.
 
-State updates may be asynchronous!  React may batch multiple `setState()` calls for performance.  So don't rely on the values
+### State updates may be asynchronous!
+React may batch multiple `setState()` calls for performance so don't rely on the values
 of `this.props` & `this.state` for calculating the next state!  For instance updating  a counter
 <br/>
 
@@ -114,7 +118,7 @@ this.setState({
 ```
 
 To fix this use a second form of `setState()` that accepts a function rather than an object.   Previous state is the 
-first argument and the props at the time the update is applied the second.
+first argument, and the props at the time the update is applied, the second.
 <br/>
 
 ```jsx 
@@ -124,7 +128,7 @@ this.setState((state, props) => ({
 }));
 ```
 
-Again, because of Javascript, and because I sometimes find the different ways of writing methods confusing
+Again, because Javascript, and because I sometimes found the different ways of writing methods confusing
 
 The above arrow function can be written as a regular function:
 <br/>

@@ -1,4 +1,5 @@
 ---
+date: "2019-07-02"
 title: "Components & Props - Like peas and carrots"
 ---
 As briefly touched on in the JSX lesson:-
@@ -35,10 +36,8 @@ This demonstrates a concept we can look at later [Class versus Functional compon
 
 
 <br/>
-<br/>
 
-But now, let's talk about Props (baby)!!!
-============================
+###But now, let's talk about Props (baby)!!!
 
 To make these reusable pieces dynamic you need to be able to supply them with different data.
 You do that with input called “props”. Props are (appropriately enough) properties (JSX attributes) supplied to User defined React components.
@@ -53,14 +52,14 @@ They can then be accessed within the component, as in the example above where "H
 **User defined Components & Props go together like peas & carrots**
 
 
-##Props are read only
+###Props are read only
 
 So for anything in your app that needs to be dynamic / changeable use `state`.  Though keep in mind that the dynamic / changeable
 state of a parent component can be used to set the props of its child or children components.
 
 Props:
 
->Props are short for properties. These are static properties on a React component that are immutable (cannot be changed).
+>Static properties on a React component that are immutable.
 
 State:
 

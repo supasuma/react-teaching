@@ -1,11 +1,13 @@
 ---
+date: "2019-07-01"
 title: "JSX - the hybrid vehicle of code"
 ---
 So JSX is a hybrid of HTML and Javascript - HTM-script or Java-TML! &nbsp;&nbsp;The official word is that it's a "syntax extension to JavaScript".
 
-It allows us to produce React "elements" and which can combine presentation work with logic.
+It allows us to easily produce React "elements" which can combine presentation work with rendering logic.  React can be written without
+it but it doesn't look great.
 
-###Simple expression 
+###Simple expression demonstrating rendering logic combined with UI logic  
 
 ```jsx
 import React from 'react';
@@ -24,9 +26,6 @@ So in the above example the "logic" of declaring a const name & displaying it wi
 You can put ANY valid JavaScript expression within those curly braces.
 
 Beware that JSX uses `className` rather than `class` within the HTML-like bits - I think there are few other instances of this as well.
-
-
-React deals with it's separation of concerns using *components*.
 
 ###Other "interesting" bits to know about JSX 
 
@@ -58,12 +57,13 @@ To render your element in a simple React app there will likely be an index.html 
 </html>
 ```
 
-To Render an element (or your whole react app) into this node, pass it and your element/App to `ReactDOM.render()` as we saw in the first example
+To render an element (or your whole react app) into this node, pass it and your element or App to `ReactDOM.render()`
 
 ```jsx
 ReactDOM.render(element, document.getElementById('root'));
 ```
 
+Now onto the bigger building blocks, *Components*, which is how React deals with it's separation of concerns.
 
 [Onto Components & Props](/2-react-component-lesson/)
 
