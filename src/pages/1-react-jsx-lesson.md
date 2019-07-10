@@ -1,5 +1,5 @@
 ---
-date: "2019-07-01"
+date: "2014-02-05"
 title: "JSX - the hybrid vehicle of code"
 ---
 So JSX is a hybrid of HTML and Javascript - HTM-script or Java-TML! &nbsp;&nbsp;The official word is that it's a "syntax extension to JavaScript".

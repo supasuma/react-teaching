@@ -1,5 +1,5 @@
 ---
-date: "2019-07-04"
+date: "2017-06-04"
 title: "Functional or Class Components"
 ---
 Differences between functional and class-Components

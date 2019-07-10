@@ -1,5 +1,5 @@
 ---
-date: "2019-07-02"
+date: "2015-01-06"
 title: "Components & Props - Like peas and carrots"
 ---
 As briefly touched on in the JSX lesson:-
